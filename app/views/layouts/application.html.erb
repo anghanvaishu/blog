@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blog</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="sidebar">
+		<div id="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "logo.svg" %>
+			<% end %>
+		</div>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+		<ul>
+			<li class="category">Website</li>
+			<li><%= link_to "Blog", root_path %></li>
+			<li>About</li>
+		</ul>
 
-  <body>
-    <%= yield %>
-  </body>
+		<ul>
+			<li class="category">Social</li>
+			<li><a href="https://twitter.com/mackenziechild">Twitter</a></li>
+			<li><a href="http://instagram.com/mackenziechild">Instagram</a></li>
+			<li><a href="https://github.com/mackenziechild">Github</a></li>
+			<li><a href="mailto:hey@mackenziechild.me">Email</a></li>
+		</ul>
+
+		
+	</div>
+
+	
+		<%= yield %>
+	
+</body>
 </html>

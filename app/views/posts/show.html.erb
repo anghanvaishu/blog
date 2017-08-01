@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h1 class="title">
   <%= @post.title %>
-</p>
+</h1>
+<p class="date">
+	submitted <%= time_ago_in_words (@post.created_at) %> Ago
+	</p>
 
-<p>
-  <strong>Body:</strong>
+<p class="body"> 
   <%= @post.body %>
 </p>
 
