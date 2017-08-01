@@ -6,6 +6,7 @@
 </h1>
 <p class="date">
 	submitted <%= time_ago_in_words (@post.created_at) %> Ago
+	| <%= link_to 'Edit', edit_post_path(@post) %>
 	</p>
 
 <p class="body"> 
